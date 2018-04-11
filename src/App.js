@@ -1,38 +1,34 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
-import PropTypes from 'prop-types';
-import { withStyles } from 'material-ui/styles';
-import AppBar from 'material-ui/AppBar';
-import Toolbar from 'material-ui/Toolbar';
-import Typography from 'material-ui/Typography';
-import Button from 'material-ui/Button';
-import IconButton from 'material-ui/IconButton';
-
-
+import Body from './Body';
 
 class App extends Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      
+    }
+  }
+
+  componentDidMount() {
+  }
+
   render() {
     return (
       <div className="App">
-       <AppBar position="static">
-        <Toolbar>
-          <IconButton color="inherit" aria-label="Menu">
-          
-          </IconButton>
-          <Typography variant="title" color="inherit" >
-            Title
-          </Typography>
-          <Button color="inherit">Login</Button>
-        </Toolbar>
-      </AppBar>
-        <header className="App-header">
+        <Body />
+
+        {/* <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to React</h1>
         </header>
+         <RaisedButton num={this.state.num} />
+        <FlatButton /> 
         <p className="App-intro">
-          To get started12s, edit <code>src/App.js</code> and save to reload.
-        </p>
+          To get started, edit <code>src/App.js</code> and save to reload.
+        </p> */}
+        <div id="bg"></div>
       </div>
     );
   }
