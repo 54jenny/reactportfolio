@@ -12,8 +12,24 @@ class Intro extends Component {
     render() {
         return (
             <div>
-                <p>Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin aliquam facilisis ante interdum congue. Integer mollis, nisl amet convallis, porttitor magna ullamcorper, amet egestas mauris. Ut magna finibus nisi nec lacinia. Nam maximus erat id euismod egestas. By the way, check out my <a href="#work">awesome work</a>.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel sed vehicula.</p>
+                <h3 className="major">profile</h3>
+                <p><b>이재은</b></p>
+                <p>jjeun19@gmail.com</p>
+                <p>정발고등학교 졸업 (2010.03 ~ 2013.02)</p>
+                <p>숭실대학교 컴퓨터학부 졸업예정 (2013.03 ~ 2018.09)</p>
+                <br></br>
+                <h3 className="major">self-introduction</h3>
+                <p>
+                    저는 어릴 때부터 모든 것에 호기심이 많았습니다. 그런 제게 컴퓨터는 맞벌이하시는 부모님 대신 다른 세상을 보여주고 경험할 수 있게 해주는 문이었습니다. 컴퓨터를 사용하는 직업 중에서도 다양한 분야에서 다양한 방식으로 소프트웨어라는 매개체를 통해 많은 사람에게 편리함을 주는 프로그래머라는 직업은 제게 정말 매력적이었습니다. 그래서 컴퓨터를 전공으로 하게 되었고 프로그래머라는 꿈을 마음속에 품게 되었습니다. 자연스럽게 전공과 진로도 컴퓨터로 정하게 되었고 학교에 입학 후 처음으로 프로그래밍을 배우기 시작했습니다. 2학년이던 2014년에 학교 수업을 통해 Java를 처음 접했습니다. C만 이용해서 코딩할 때와는 다르게 객체지향이라는 개념과 GUI로 구현할 수 있게 되자 프로그래밍이 점점 더 재미있어졌고 이후 가장 쉽게 접할 수 있는 안드로이드 개발에 관심을 가지면서 Java에 대해 더 공부하게 되었습니다.
+                </p>
+                <p>
+                    저는 컴퓨터를 전공하면서 처음 프로그래밍을 접하고 코딩을 하게 되었는데 제가 작성한 코드가 실행되어 어떤 프로그램으로 만들어진다는 것이 저에게 굉장히 흥미롭게 다가왔습니다. 그러던 중에 수업을 듣고 수업과 관련된 과제나 프로젝트만 수행하는 것으로는 전공과 관련된 경험을 쌓기에 부족하다는 생각이 들었습니다. 이러한 점을 개선하기 위해 2015년에는 공모전을 준비하는 소모임에 가입하여 교과목과 관련되지 않은 여러 프로젝트를 시도했지만 이런 경험이 전혀 없다 보니 제가 하려는 방향에 대한 의사소통을 잘할 수 없었고 여러 번 프로젝트가 잘 진행되지 않고 실패하는 경험을 반복하게 되었습니다. 이대로는 안 되겠다는 생각을 한 후, 친한 친구들과 함께 안드로이드 악필 교정 어플리케이션 개발을 진행했습니다. 이 프로젝트를 하는 가운데에도 많은 위기가 있었지만 그중에서도 팀원 간의 의견 충돌이 생길 때, 프로젝트가 슬럼프에 빠질 때 가장 어려웠습니다. 그때 제 역할은 팀원 간의 이견을 조율하는 다리 역할과 프로젝트 진도가 나가지 않을 때 먼저 찾아보고 공부하여 팀원들과 공유하는 역할이었고 이번만큼은 잘 해내고 싶었기 때문에 큰 관심을 기울이고 이견을 조율해 나갔습니다. 그리고 리더와 팀원들과 노력한 결과 상도 받을 수 있었습니다.
+                </p>
+                <p>
+                    프로젝트를 하다 보니 졸업을 한 후 본격적으로 취업하기 전에 휴학하고 학교가 아닌 곳에서 더 경험을 쌓아보고 싶다고 생각했습니다. 그래서 3학년을 마친 후 중소기업에서 6개월간 인턴으로 근무하며 실무 경험을 쌓았고, 현재는 react / node.js를 이용하여 간단한 웹사이트를 구축하는 법을 공부하고 있습니다.
+                    원하는 일을 하기 위해 다양한 경험을 쌓았으나 아직은 부족한 점이 많기 때문에 현실에 안주하지 않고 계속해서 열심히 노력할 것이며, 계단을 하나씩 오른다는 마음으로 최선을 다하겠습니다.
+                </p>
+                <br></br>
             </div>
         );
     }

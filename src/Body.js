@@ -4,25 +4,58 @@ import Header from './Header';
 import Intro from './Intro';
 import Contact from './Contact';
 import SimpleContents from './SimpleContents';
+import MultipleContents from './MultipleContents';
+import Elements from './Elements';
+import Projects from './Projects';
+import Careers from './careers';
 
 class Body extends Component {
 
 	constructor(props) {
 		super(props);
-		const menu = ["intro", "work", "about", "contact"];
+		const menu = ["intro", "skills", "projects", "careers", "elements"];
+		const projects = [0, 1];
+		const projectsTitle = ["Android", "Resume"];
+		const projectsContent = ["android is good", "resume is good"]
+		const projectsImage = ["pic02.jpg", "pic02.jpg"]
 
 		this.state = {
-			links: menu
-		}
+			links: menu,
+			projects: [0, 1],
+			projectsTitle: ["Android", "Resume"],
+			projectsContent: [
+				"android is good",
+				"resume is good"
+			],
+			projectsImage: ["pic02.jpg", "pic02.jpg"]
+		};
 
 
 	}
 
 	componentDidMount() {
+
+		// fetch("http://localhost:3001/users/androidproject")
+		// .then(data=>data.json())
+		// .then(data=>{
+		// 	var projectsContent = this.state.projectsContent;
+		// 	projectsContent[0] = data.content;
+		// 	this.setState({projectsContent : projectsContent})
+		// })
 	}
 	workRender() {
-		return (<p>Adipiscing magna sed dolor elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices.
-			Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet feugiat tempus.</p>)
+		return (<p>
+			<h3 class="major">1. Django / Bootstrap</h3>
+			<p>- Django와 Bootstrap을 이용한 풀스택 게시판 프로젝트를 진행한 경험이 있음.</p>
+			<br></br>
+			<h3 class="major">2. Android</h3>
+			<p>- Android App을 제작하여 교내 공모전에 입상한 경험이 있음.</p>
+			<br></br>
+			<h3 class="major">3. Web Programming</h3>
+			<p>- JSP, 서블릿, 자바빈즈를 사용한 웹 프로그래밍 수업 과제로 회원가입 기능과 영화 예매 기능이 있는 간단한 영화 예매 사이트를 구현한 경험이 있음.</p>
+			<p>- React / Node.js를 이용한 이력서 웹사이트 구축한 경험이 있음.</p>
+		</p>
+		)
 	}
 	render() {
 		return (
@@ -32,24 +65,31 @@ class Body extends Component {
 
 				<div id="main">
 
-					<SimpleContents articleId={"intro"} imgName={"pic01.jpg"} title={"INTRO"}>
+					<SimpleContents articleId={this.state.links[0]} imgName={"pic01.jpg"} title={"INTRO"}>
 						<Intro />
 					</SimpleContents>
 
-					{/* <!-- Work --> */}
-					<SimpleContents articleId={"work"} imgName={"pic02.jpg"} title={"WORK"}>
-						{ this.workRender() }
+
+					<SimpleContents articleId={this.state.links[1]} imgName={"pic02.jpg"} title={"SKILLS"}>
+						{this.workRender()}
 					</SimpleContents>
 
-					{/* <!-- About --> */}
-					<SimpleContents articleId={"about"} imgName={"pic03.jpg"} title={"ABOUT"}>
-						<p>Lorem ipsum dolor sit amet, consectetur et adipiscing elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices. Aliquam libero et malesuada fames ac ante ipsum primis in faucibus. Cras viverra ligula sit amet ex mollis mattis lorem ipsum dolor sit amet.</p>
+					<SimpleContents articleId={this.state.links[2]} imgName={"pic03.jpg"} title={"PROJECTS"}>
+						<Projects />
 					</SimpleContents>
 
-					<Contact />
+					<SimpleContents articleId={this.state.links[3]} imgName={"pic04.jpg"} title={"CAREERS"}>
+						<Careers />
+					</SimpleContents>
 
-					{/* <!-- Elements --> 
-						<Elements />*/}
+					{/* 
+					 <MultipleContents articleId={this.state.links[2]} images={this.state.projectsImage} 
+					 					index={this.state.projects} titles={this.state.projectsTitle} contents={this.state.projectsContent} /> */}
+
+
+
+
+					<Elements />
 				</div>
 
 				{/* <!-- Footer --> */}

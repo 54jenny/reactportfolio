@@ -6,18 +6,63 @@ class Elements extends Component {
     constructor(props) {
         super(props);
         this.state = {
-
+            posts: [],
+            name: "default-name",
+            title: "default-title",
+            content: "default-content"
         }
     }
 
+    getPostList() {
+        fetch("https://resumepost.herokuapp.com/post/list")
+        .then(data => data.json())
+        .then(data => {
+            console.log(data);
+            if (data.result != "error") {
+                this.setState(
+                    {posts: data.data}
+                )
+            }
+        })
+        .catch(e => console.log(e))
+    }
+
+    writePost() {
+        fetch('https://resumepost.herokuapp.com/post', {
+            method: 'post',
+            body: JSON.stringify({
+             "name" :this.state.title,
+             "title" : this.state.title,
+             "content" : this.state.content
+            })
+           }).then(data => data.json())
+           .then(data => {
+               console.log(data);
+           })
+           .catch(e => console.log(e));
+    }
+
     componentDidMount() {
+        this.writePost()
+        this.getPostList()
+        
     }
 
     render() {
         return (
             <article id="elements">
                 <h2 class="major">Elements</h2>
-
+                {
+                    this.state.posts.map(
+                        post => {
+                            return(
+                                <div>
+                                {post.name +"/"+ post.title +"/"+ post.content +"/"+ post.createdAt}
+                                </div>
+                            )
+                        }
+                    )
+                }
                 <section>
                     <h3 class="major">Text</h3>
                     <p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.

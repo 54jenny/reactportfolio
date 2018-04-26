@@ -17,7 +17,7 @@ class SimpleContents extends Component {
         return (
             <article id={this.props.articleId}>
                 <h2 className="major">{this.props.title}</h2>
-                <span className="image main"><img src={"images/"+this.props.imgName} alt="" /></span>
+                {/* <span className="image main"><img src={"images/"+this.props.imgName} alt="" /></span> */}
                 {
                     this.props.children
                 }
