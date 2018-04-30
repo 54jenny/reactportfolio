@@ -13,7 +13,7 @@ class Body extends Component {
 
 	constructor(props) {
 		super(props);
-		const menu = ["intro", "skills", "projects", "careers", "elements"];
+		const menu = ["intro", "skills", "projects", "careers", "contact"];
 		const projects = [0, 1];
 		const projectsTitle = ["Android", "Resume"];
 		const projectsContent = ["android is good", "resume is good"]
@@ -30,18 +30,10 @@ class Body extends Component {
 			projectsImage: ["pic02.jpg", "pic02.jpg"]
 		};
 
-
 	}
 
 	componentDidMount() {
 
-		// fetch("http://localhost:3001/users/androidproject")
-		// .then(data=>data.json())
-		// .then(data=>{
-		// 	var projectsContent = this.state.projectsContent;
-		// 	projectsContent[0] = data.content;
-		// 	this.setState({projectsContent : projectsContent})
-		// })
 	}
 	workRender() {
 		return (<p>
@@ -72,7 +64,6 @@ class Body extends Component {
 						<Intro />
 					</SimpleContents>
 
-
 					<SimpleContents articleId={this.state.links[1]} imgName={"pic02.jpg"} title={"SKILLS"}>
 						{this.workRender()}
 					</SimpleContents>
@@ -85,14 +76,8 @@ class Body extends Component {
 						<Careers />
 					</SimpleContents>
 
-					{/* 
-					 <MultipleContents articleId={this.state.links[2]} images={this.state.projectsImage} 
-					 					index={this.state.projects} titles={this.state.projectsTitle} contents={this.state.projectsContent} /> */}
+					<Contact />
 
-
-
-
-					<Elements />
 				</div>
 
 				{/* <!-- Footer --> */}
