@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 
-class Contact extends Component {
+class Board extends Component {
 
     constructor(props) {
         super(props);
@@ -19,7 +19,7 @@ class Contact extends Component {
             .then(data => data.json())
             .then(data => {
                 console.log(data);
-                if (data.result != "error") {
+                if (data.result !== "error") {
                     this.setState(
                         { posts: data.data }
                     )
@@ -57,23 +57,29 @@ class Contact extends Component {
 
 
     testAction() {
-        
-        this.setState(
-            {
-                name: document.getElementById("name").value,
-                content: document.getElementById("message").value
-            },function(){
-                this.writePost();  
-                console.log(document.getElementById("name").value);
+        var user_name = document.getElementById("name").value;
+        var user_content = document.getElementById("message").value;
+
+        if (user_name != null) {
+            if (user_content != null) {
+                this.setState(
+                    {
+                        name: user_name,
+                        content: user_content
+                    }, function () {
+                        this.writePost();
+                        console.log(document.getElementById("name").value);
+                    }
+                );
             }
-        );
-        
+        }
+
     }
 
     render() {
         return (
-            <article id="contact">
-                <h2 className="major">Contact</h2>
+            <article id="board">
+                <h2 className="major">Board</h2>
                 <form method="post" action="#">
                     <div className="field">
                         <label htmlFor="name">Name</label>
@@ -84,18 +90,18 @@ class Contact extends Component {
                         <textarea name="message" id="message" rows="4"></textarea>
                     </div>
                     <ul className="actions">
-                        <li id="testbtn"><a class="button special">Send Message</a></li>
+                        <li id="testbtn"><a className="button special">Send Message</a></li>
                         <li><input type="reset" value="Reset" /></li>
                     </ul>
                 </form>
                 <br></br>
                 <h3>List</h3>
-                <div class="table-wrapper">
-                    <table class="alt">
+                <div className="table-wrapper">
+                    <table className="alt">
                         <thead>
                             <tr>
                                 <th>Name</th>
-                                <th colspan="5">Content</th>
+                                <th colSpan="5">Content</th>
                                 <th>Date</th>
                             </tr>
                         </thead>
@@ -106,7 +112,7 @@ class Contact extends Component {
                                         return (
                                             <tr>
                                                 <td>{post.name}</td>
-                                                <td colspan="5">{post.content}</td>
+                                                <td colSpan="5">{post.content}</td>
                                                 <td>{post.createdAt.split("T")[0]}</td>
                                             </tr>
                                         )
@@ -116,7 +122,7 @@ class Contact extends Component {
                         </tbody>
                         <tfoot>
                             <tr>
-                                <td colspan="2"></td>
+                                <td colSpan="2"></td>
                                 <td></td>
                             </tr>
                         </tfoot>
@@ -129,4 +135,4 @@ class Contact extends Component {
     }
 }
 
-export default Contact;
+export default Board;

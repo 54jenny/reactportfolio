@@ -2,10 +2,8 @@ import React, { Component } from 'react';
 import './App.css';
 import Header from './Header';
 import Intro from './Intro';
-import Contact from './Contact';
+import Board from './Board';
 import SimpleContents from './SimpleContents';
-import MultipleContents from './MultipleContents';
-import Elements from './Elements';
 import Projects from './Projects';
 import Careers from './careers';
 
@@ -13,11 +11,7 @@ class Body extends Component {
 
 	constructor(props) {
 		super(props);
-		const menu = ["intro", "skills", "projects", "careers", "contact"];
-		const projects = [0, 1];
-		const projectsTitle = ["Android", "Resume"];
-		const projectsContent = ["android is good", "resume is good"]
-		const projectsImage = ["pic02.jpg", "pic02.jpg"]
+		const menu = ["intro", "skills", "projects", "careers", "board"];
 
 		this.state = {
 			links: menu,
@@ -37,17 +31,17 @@ class Body extends Component {
 	}
 	workRender() {
 		return (<p>
-			<h3 class="major">1. 이력서 웹사이트</h3>
-			<p>- React.js + Node.js + MongoDB(mlab) + Heroku</p>
+			<h3 className="major">1. 이력서 웹사이트</h3>
+			<p>React.js + Node.js + MongoDB(mlab) + Heroku</p>
 			<br></br>
-			<h3 class="major">2. 패스트캠퍼스 게시판 프로젝트</h3>
-			<p>- Django + Bootstrap</p>
+			<h3 className="major">2. 패스트캠퍼스 게시판 프로젝트</h3>
+			<p>Django + Bootstrap</p>
 			<br></br>
-			<h3 class="major">3. 교내 공모전</h3>
-			<p>- Android</p>
+			<h3 className="major">3. 교내 공모전</h3>
+			<p>Android</p>
 			<br></br>
-			<h3 class="major">4. 외부 강의 웹 프로젝트</h3>
-			<p>- JSP + Servlet + JavaBeans</p>
+			<h3 className="major">4. 외부 강의 웹 프로젝트</h3>
+			<p>JSP + Servlet + JavaBeans</p>
 			<br></br>
 		</p>
 		)
@@ -76,7 +70,7 @@ class Body extends Component {
 						<Careers />
 					</SimpleContents>
 
-					<Contact />
+					<Board />
 
 				</div>
 
