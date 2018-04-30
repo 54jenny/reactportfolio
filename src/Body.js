@@ -46,14 +46,17 @@ class Body extends Component {
 	workRender() {
 		return (<p>
 			<h3 class="major">1. Django / Bootstrap</h3>
-			<p>- Django와 Bootstrap을 이용한 풀스택 게시판 프로젝트를 진행한 경험이 있음.</p>
+			<p>- Django와 Bootstrap을 이용한 풀스택 게시판 프로젝트 진행</p>
 			<br></br>
 			<h3 class="major">2. Android</h3>
-			<p>- Android App을 제작하여 교내 공모전에 입상한 경험이 있음.</p>
+			<p>- Android App을 제작하여 교내 공모전에서 입상</p>
 			<br></br>
-			<h3 class="major">3. Web Programming</h3>
-			<p>- JSP, 서블릿, 자바빈즈를 사용한 웹 프로그래밍 수업 과제로 회원가입 기능과 영화 예매 기능이 있는 간단한 영화 예매 사이트를 구현한 경험이 있음.</p>
-			<p>- React / Node.js를 이용한 이력서 웹사이트 구축한 경험이 있음.</p>
+			<h3 class="major">3. JSP, Servlet, JavaBeans</h3>
+			<p>- 웹 프로그래밍 수업 과제로 JSP, 서블릿, 자바 빈즈를 사용한 회원가입 기능과 영화 예매 기능이 있는 간단한 영화 예매 사이트를 구현</p>
+			<br></br>
+			<h3 class="major">4, React + Node.js</h3>
+			<p>- React와 node.js를 이용한 이력서 웹사이트 구축</p>
+			<br></br>
 		</p>
 		)
 	}

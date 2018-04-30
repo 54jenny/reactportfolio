@@ -15,54 +15,86 @@ class Elements extends Component {
 
     getPostList() {
         fetch("https://resumepost.herokuapp.com/post/list")
-        .then(data => data.json())
-        .then(data => {
-            console.log(data);
-            if (data.result != "error") {
-                this.setState(
-                    {posts: data.data}
-                )
-            }
-        })
-        .catch(e => console.log(e))
+            .then(data => data.json())
+            .then(data => {
+                console.log(data);
+                if (data.result != "error") {
+                    this.setState(
+                        { posts: data.data }
+                    )
+                }
+            })
+            .catch(e => console.log(e))
     }
 
     writePost() {
         fetch('https://resumepost.herokuapp.com/post', {
             method: 'post',
             body: JSON.stringify({
-             "name" :this.state.title,
-             "title" : this.state.title,
-             "content" : this.state.content
+                "name": this.state.title,
+                "title": this.state.title,
+                "content": this.state.content
             })
-           }).then(data => data.json())
-           .then(data => {
-               console.log(data);
-           })
-           .catch(e => console.log(e));
+        }).then(data => data.json())
+            .then(data => {
+                console.log(data);
+            })
+            .catch(e => console.log(e));
     }
 
     componentDidMount() {
         this.writePost()
         this.getPostList()
-        
     }
 
     render() {
         return (
             <article id="elements">
                 <h2 class="major">Elements</h2>
-                {
-                    this.state.posts.map(
-                        post => {
-                            return(
-                                <div>
-                                {post.name +"/"+ post.title +"/"+ post.content +"/"+ post.createdAt}
-                                </div>
-                            )
-                        }
-                    )
-                }
+                <div>
+                    <ul>
+                        <li><a class="button special">TEST</a></li>
+                    </ul>
+                </div>
+
+                <h4>Alternate</h4>
+                <div class="table-wrapper">
+                    <table class="alt">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Title</th>
+                                <th>Content</th>
+                                <th>Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {
+                                this.state.posts.map(
+                                    post => {
+                                        return (
+                                            <tr>
+                                                <td>{post.name}</td>
+                                                <td>{post.title}</td>
+                                                <td>{post.content}</td>
+                                                <td>{post.createdAt}</td>
+                                            </tr>
+                                        )
+                                    }
+                                )
+                            }
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="2"></td>
+                                <td>100.00</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+
+
+
                 <section>
                     <h3 class="major">Text</h3>
                     <p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
