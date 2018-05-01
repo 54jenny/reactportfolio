@@ -14,7 +14,7 @@ class Careers extends Component {
             <div>
                 <h3 className="major">Internship : BITNINE, 2016.03 ~ 2016.09</h3>
                 <p></p>
-                <p>6학기를 마친 후 실무 경험을 쌓기 위해 (주)비트나인 그래프컨설팅팀에서 6개월간 인턴으로 근무했습니다. 주 업무는 DBMS Architectrue에 대한 전반적인 지식을 바탕으로 솔루션을 구성하는 것이었습니다.
+                <p>6학기를 마친 후 실무 경험을 쌓기 위해 (주)비트나인 그래프컨설팅팀에서 6개월간 인턴으로 근무했습니다. 주로 Graphic DBMS 관련 문서를 번역하는 것과 Unit test를 포함한 QA 업무를 담당했습니다.
                 </p>
                 <br></br>
                 <h3 className="major">Study #1 : FAST CAMPUS, 2014.08 ~ 2014.10</h3>
