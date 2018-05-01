@@ -76,7 +76,7 @@ class Body extends Component {
 
 				{/* <!-- Footer --> */}
 				<footer id="footer">
-					<p className="copyright">&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>. react로 바꿈: 이재은</p>
+					<p className="copyright">&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>. modify with react.js: 이재은</p>
 				</footer>
 
 			</div>
