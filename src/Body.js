@@ -34,11 +34,11 @@ class Body extends Component {
 			<h3 className="major">1. 이력서 웹사이트</h3>
 			<p>React.js + Node.js + MongoDB(mlab) + Heroku</p>
 			<br></br>
-			<h3 className="major">2. 패스트캠퍼스 게시판 프로젝트</h3>
-			<p>Django + Bootstrap</p>
+			<h3 className="major">2. 사이드 프로젝트</h3>
+			<p>Android App</p>
 			<br></br>
-			<h3 className="major">3. 교내 공모전</h3>
-			<p>Android</p>
+			<h3 className="major">3. 패스트캠퍼스 게시판 프로젝트</h3>
+			<p>Django + Bootstrap</p>
 			<br></br>
 			<h3 className="major">4. 외부 강의 웹 프로젝트</h3>
 			<p>JSP + Servlet + JavaBeans</p>
